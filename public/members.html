@@ -10,6 +10,164 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + LeadMark main styles -->
 	<link rel="stylesheet" href="assets/css/leadmark.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .head .information {
+            padding: 10px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(-45deg, rgb(255, 221, 153) 45%, rgb(255, 170, 0) 0%);
+        } 
+        .head .head_space {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .head .head_space .head_person {
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .head .head_space .head_person .image {
+            width: 50%;
+            height: 100%;
+        }
+        .head .head_space .head_person .info {
+            vertical-align: middle;
+            margin: 5px;
+            margin-left: 10px;
+            line-height: 1.0;
+            text-align: left;
+        }
+        .web .information {
+            padding: 10px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(-45deg, rgb(153, 204, 255) 45%, rgb(77, 121, 255) 0%);
+        } 
+        .web .web_space {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .web .web_space .web_person {
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .web .web_space .web_person .image {
+            width: 50%;
+            height: 100%;
+        }
+        .web .web_space .web_person .info {
+            vertical-align: middle;
+            margin: 5px;
+            margin-left: 10px;
+            line-height: 1.0;
+            text-align: left;
+        }
+        .decotrans .information {
+            padding: 10px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(-45deg, rgb(153, 255, 153) 45%, rgb(51, 255, 51) 0%);
+        } 
+        .decotrans .decotrans_space {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .decotrans .decotrans_space .decotrans_person {
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .decotrans .decotrans_space .decotrans_person .image {
+            width: 50%;
+            height: 100%;
+        }
+        .decotrans .decotrans_space .decotrans_person .info {
+            vertical-align: middle;
+            margin: 5px;
+            margin-left: 10px;
+            line-height: 1.0;
+            text-align: left;
+        }
+        .hrerpr .information {
+            padding: 10px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(-45deg, rgb(223, 159, 191) 45%, rgb(172, 57, 115) 0%);
+        } 
+        .hrerpr .hrerpr_space {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .hrerpr .hrerpr_space .hrerpr_person {
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .hrerpr .hrerpr_space .hrerpr_person .image {
+            width: 50%;
+            height: 100%;
+        }
+        .hrerpr .hrerpr_space .hrerpr_person .info {
+            vertical-align: middle;
+            margin: 5px;
+            margin-left: 10px;
+            line-height: 1.0;
+            text-align: left;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $("#web").hide(); 
+            $("#head").hide(); 
+            $("#decotrans").hide();
+            $("#hrerpr").hide();
+            $("#head_button").click(function(){
+                $("#web").hide();
+                $("#head").show(); 
+                $("#decotrans").hide();
+                $("#hrerpr").hide();
+            });
+            $("#web_button").click(function(){
+                $("#web").show();
+                $("#head").hide(); 
+                $("#decotrans").hide();
+                $("#hrerpr").hide();
+            });
+            $("#DesginContentTranslate_button").click(function(){
+                $("#web").hide();
+                $("#head").hide(); 
+                $("#decotrans").show();
+                $("#hrerpr").hide();
+            });
+            $("#hrerpr_button").click(function(){
+                $("#web").hide();
+                $("#head").hide(); 
+                $("#decotrans").hide();
+                $("#hrerpr").show();
+            });
+        });
+    </script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -63,40 +221,28 @@
             <h6 class="section-title text-center">Our Members</h6>
             <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
             <div class="filters">
-                <a href="#" data-filter=".Web">
+                <a href="#" data-filter=".Head" id = "head_button">
+                    Head
+                </a>
+                <a href="#" data-filter=".Web" id = "web_button">
                     Web
                 </a>
-                <a href="#" data-filter=".KFP">
-                    KFP
+                <a href="#" data-filter=".DesginContentTranslate" id = "DesginContentTranslate_button">
+                    DCT
                 </a>
-                <a href="#" data-filter=".Skilladora">
-                    Skilladora
-                </a>
-                <a href="#" data-filter=".Bookaholic">
-                    Bookaholic
+                <a href="#" data-filter=".Skilladora" id = "hrerpr_button">
+                    HEP
                 </a>
             </div>
             <div class="portfolio-container"> 
-                <div class="col-md-6 col-lg-4 KFP">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/web-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/web-1.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">WEB</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>   
-                    </div>             
-                </div>
                 <div class="col-md-6 col-lg-4 web new">
                     <div class="portfolio-item">
                         <img src="assets/imgs/web-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
                         <div class="content-holder">
                             <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">WEB</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            <div class="text-holder" id = "head_button">
+                                <h6 class="title">HEAD</h6>
+                                <p class="subtitle">Giới thiệu founder, co-founder và head các ban</p>
                             </div>
                         </div> 
                     </div>                         
@@ -106,46 +252,21 @@
                         <img src="assets/imgs/advertising-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
                         <div class="content-holder">
                             <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERSTISING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            <div class="text-holder" id = "web_button">
+                                <h6 class="title">WEB</h6>
+                                <p class="subtitle">Giới thiệu ban Web</p>
                             </div>
                         </div>    
                     </div>              
-                </div> 
-                <div class="col-md-6 col-lg-4 web">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/web-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/web-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">WEB</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                     
-                </div>
-
-                <div class="col-md-6 col-lg-4 advertising"> 
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/advertising-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERSITING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                       
                 </div> 
                 <div class="col-md-6 col-lg-4 web new">
                     <div class="portfolio-item">
                         <img src="assets/imgs/web-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
                        <div class="content-holder">
                             <a class="img-popup" href="assets/imgs/web-3.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">WEB</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            <div class="text-holder" id = "DesginContentTranslate_button">
+                                <h6 class="title">DCT</h6>
+                                <p class="subtitle">Giới thiệu ban Design, Content, Translate</p>
                             </div>
                         </div>
                     </div>                                                     
@@ -155,127 +276,427 @@
                         <img src="assets/imgs/advertising-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
                        <div class="content-holder">
                             <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERSITING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            <div class="text-holder" id = "hrerpr_button">
+                                <h6 class="title">HEP</h6>
+                                <p class="subtitle">Giới thiệu ban HR, ER, PR</p>
                             </div>
                         </div>
                     </div>                                                       
                 </div> 
-                <div class="col-md-6 col-lg-4 advertising new"> 
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERTISING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>
-                            
-                </div> 
-                <div class="col-md-6 col-lg-4 advertising new"> 
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERTISsdsdING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>
-                            
-                </div> 
-                <div class="col-md-6 col-lg-4 advertising new"> 
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERTISING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>
-                            
-                </div> 
-                 <div class="col-md-6 col-lg-4 advertising new"> 
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">ADVERTISING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>
-                            
-                </div> 
-                <div class="col-md-6 col-lg-4 branding new">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/branding-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">BRANDING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div> 
-                <div class="col-md-6 col-lg-4 branding">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/branding-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/branding-2.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">BRANDING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                     
-                </div> 
-                <div class="col-md-6 col-lg-4 branding new">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/branding-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">BRANDING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                    
-                </div> 
-                <div class="col-md-6 col-lg-4 branding">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/branding-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/branding-4.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">BRANDING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                      
-                </div> 
-                <div class="col-md-6 col-lg-4 branding">
-                    <div class="portfolio-item">
-                        <img src="assets/imgs/branding-5.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
-                        <div class="content-holder">
-                            <a class="img-popup" href="assets/imgs/branding-5.jpg"></a>
-                            <div class="text-holder">
-                                <h6 class="title">BRANDING</h6>
-                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                            </div>
-                        </div>
-                    </div>                                                   
-                </div>
             </div>   
-        </div>            
+            <div class = "head" id = "head">
+                <b style = "font-size: 20px; margin: 5px;">Founder, Co-founder và các Head </b>
+                <div class = "information" id = "information">
+                    <div class = "head_space" id = "head_space">
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Gia Linh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Gia Linh</b> (Founder & Web Developer)
+                                <p>Top 20 học sinh đạt điểm tuyển sinh (văn, toán, anh) cao nhất thành phố <br>
+                                Công nhận học sinh giỏi cấp quận môn Anh năm học 2021-2022 <br>
+                                Bằng HSK3 tiếng Trung (tương đương B1 Tiếng trung) <br>
+                                Best Learner of the Year 2021 tại FCT Club <br>
+                                Là thành viên của CLB Lập trình Tài Năng FCTClub <br>
+                                Coreteam trong dự án tâm lý LYSef...</p>
+                            </div>
+                        </div>
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Hồng Anh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Hồng Anh</b> (Co-founder & HR Manager)
+                                <p>Trúng tuyển Chuyên Anh Trường Phổ thông Năng khiếu và THPT chuyên Trần Đại Nghĩa <br>
+                                Thành viên ban Nhân sự - The Institute of Viécie Gen 1 <br>
+                                Đại sứ truyền thông Path to Psyche - P2P Gen tháng 8/2022 <br>
+                                Thành viên ban Truyền thông - Wing And Wish Gen 2 <br>
+                                Thành viên ban Nhân sự trong CLB Vật lý+ của THPT Chuyên TĐN </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "head_space" id = "head_space">
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head3.png" alt="Nguyễn Hoàng Thái Sơn" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Hoàng Thái Sơn</b> (Co-founder & HR Member)
+                                <p>Ảnh chất lượng nhưng chưa có info :33</p>
+                            </div>
+                        </div>
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web1.png" alt="Hoàng Anh Minh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hoàng Anh Minh</b> (Web Manager)
+                                <p>Học Chuyên Anh tại Trường Phổ Thông Năng Khiếu - ĐHQG <br>
+                                Đạt giải Nhất HSGQG môn tiếng Anh <br>
+                                Thành viên Câu lạc bộ Tài năng Lập trình FPT Software - FCT Club <br>
+                                3 năm phát triển các ứng dụng web <br>
+                                Lập trình backend với Django</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "head_space" id = "head_space">
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head5.png" alt="Hoàng Nguyễn Phương Mai" style = "margin-top: 20px; margin-left: 0; width: 100%; height: 75%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hoàng Nguyễn Phương Mai</b> (Design Manager)
+                                <p> Đạt danh hiệu học sinh giỏi nhất khối năm lớp 6,8,9 <br>
+                                    Đạt 27,25 điểm trong kì thi Tuyển sinh 10 <br>
+                                    Trúng tuyển trường THPT Nguyễn Thượng Hiền <br>                                 
+                                    Đạt giải trong Kì thi Nét Vẽ Xanh cấp quận năm 2017, 2018, 2019 <br>
+                                    Phụ trách các phong trào về mỹ thuật của lớp từ năm học 2018-2022 </p>
+                            </div>
+                        </div>
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Trần Nguyễn Hoa Thiên" style = "margin-top: 10px; width: 100%; height: 50%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Trần Nguyễn Hoa Thiên</b> (Content Manager)
+                                <p> Thủ khoa chuyên Văn Kỳ thi đầu vào Phổ Thông Năng Khiếu  (37,5đ) <br>
+                                    Đạt 42.25đ chuyên Văn Kỳ thi Tuyển sinh lớp 10 Sở GD-ĐT TP.HCM <br>
+                                    Làm trong dự án Chicken Minds, môn Văn <br>
+                                    Kinh nghiệm viết lách, viết caption Facebook </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "head_space" id = "head_space">
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head7.png" alt="Hồ Huy Hoàng" style = "margin-top: 20px; margin-left: 0; width: 95%; height: 55%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hồ Huy Hoàng</b> (External Relations Manager & Translate Member)
+                                <p> Huy Chương Bạc môn Tiếng Anh, cuộc thi Olympic 30/4 TP.HCM năm lớp 8 <br>
+                                    Giải Nhì môn Tiếng Anh, cuộc thi Học Sinh Giỏi cấp Thành Phố TP.HCM năm lớp 9 <br>
+                                    Được chọn vào đội tuyển Olympic 10 Chuyên của trường THPT Chuyên Trần Đại Nghĩa <br>
+                                    Tranh biện trong hội nghị mô hình Liên Hợp Quốc của Trần Đại Nghĩa (TOMUN) <br>
+                                    Hai năm tự học, gắn bó với tiếng Pháp </p>
+                            </div>
+                        </div>
+                        <div class = "head_person" id = "head_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head8.png" alt="Đặng Mai Khánh Minh" style = "margin: 10px; width: 90%; height: 60%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đặng Mai Khánh Minh</b> (Program Manager)
+                                <p> Trúng tuyển lớp 10XH trường PTNK-ĐHQG <br>
+                                    TOEFL junior đạt 845/900 <br>                 
+                                    Phó ban chương trình CLB Hàn Quốc trường THPT chuyên Trần Đại Nghĩa </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "web" id = "web">
+                <b style = "font-size: 20px; margin: 5px;">Ban Web </b>
+                <div class = "information" id = "information">
+                    <div class = "web_space" id = "web_space">
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web1.png" alt="Hoàng Anh Minh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hoàng Anh Minh</b>
+                                <p>Học Chuyên Anh tại Trường Phổ Thông Năng Khiếu - ĐHQG <br>
+                                Đạt giải Nhất HSGQG môn tiếng Anh <br>
+                                Thành viên Câu lạc bộ Tài năng Lập trình FPT Software - FCT Club <br>
+                                3 năm phát triển các ứng dụng web <br>
+                                Lập trình backend với Django</p>
+                            </div>
+                        </div>
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Gia Linh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Gia Linh</b>
+                                <p>Top 20 học sinh đạt điểm tuyển sinh (văn, toán, anh) cao nhất thành phố <br>
+                                Công nhận học sinh giỏi cấp quận môn Anh năm học 2021-2022 <br>
+                                Bằng HSK3 tiếng Trung (tương đương B1 Tiếng trung) <br>
+                                Best Learner of the Year 2021 tại FCT Club ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "web_space" id = "web_space">
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Nhật Linh" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Nhật Linh</b>
+                                <p>Chưa có info ;-;</p>
+                            </div>
+                        </div>
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web3.png" alt="Nguyễn Quỳnh Mai" style = "margin: 10px; width: 90%; height: 85%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Quỳnh Mai</b>
+                                <p>Chuyên tin - THPT Chuyên Võ Nguyên Giáp
+                                Best Learner of the Year 2022 tại FCT Club <br>
+                                GPA nhất lớp 4 năm (9.0 trở lên) <br>
+                                Thành viên của FCT Club <br>
+                                Có kinh nghiệm học lập trình 2 năm </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "web_space" id = "web_space">
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web4.png" alt="Lê Nguyễn Phương Trang" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Lê Nguyễn Phương Trang</b>
+                                <p>GPA 2 năm nhất lớp (9.7/10) <br>
+                                Outstanding Learner of the Year năm học 2021 - 2022 tại FCT Club <br>
+                                Có kinh nghiệm học lập trình 5 năm <br>
+                                Có kinh nghiệm code front-end và back-end 2 năm <br>
+                                Có kinh nghiệm code C++, Python 3 năm </p>
+                            </div>
+                        </div>
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web5.png" alt="Phạm Bình Nam" style = "margin-top: 10px; width: 100%; height: 50%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Phạm Bình Nam</b>
+                                <p> Vô địch Bảng B (Khối 5-6) Coding Olympics VietNam 2020 Toàn quốc <br>
+                                Vô địch Bảng B1 (Tiểu học) Cuộc thi Tài Năng Robot - Robotacon WRO 2018 <br>
+                                Là 1 trong 16 đội đại diện Việt Nam tham dự WRO Thái Lan 2018 - Vòng Chung Kết Robot Thế Giới Cuộc thi Tài Năng Robot Robotacon WRO 2018 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "web_space" id = "web_space">
+                        <div class = "web_person" id = "web_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web7.png" alt="Đặng Phước Nguyên Khôi" style = "margin-top: 20px; width: 100%; height: 70%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đặng Phước Nguyên Khôi</b>
+                                <p>Top 4 Kì thi đầu vào chuyên Anh Trường THPT Chuyên Thăng Long. <br>
+                                Top 2 Điểm Anh chuyên kì thi đầu vào chuyên Anh Trường THPT Chuyên Thăng Long <br>
+                                Giải nhì cuộc thi English in Your Life Lâm Đồng. <br>
+                                Thành viên CLB Tài năng Lập trình FPT Software - FCT Club. <br>
+                                Outstanding learner of the year 2021 của FCT Club. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "decotrans" id = "decotrans">
+                <b style = "font-size: 20px; margin: 5px;">Ban Design, Content, Translate </b>
+                <div class = "information" id = "information">
+                    <div class = "decotrans_space" id = "decotrans_space">
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head5.png" alt="Hoàng Nguyễn Phương Mai" style = "margin: 10px; margin-left: 0; width: 100%; height: 70%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hoàng Nguyễn Phương Mai</b> (Design Manager)
+                                <p> Đạt danh hiệu học sinh giỏi nhất khối năm lớp 6,8,9 <br>
+                                    Đạt 27,25 điểm trong kì thi Tuyển sinh 10 <br>
+                                    Trúng tuyển trường THPT Nguyễn Thượng Hiền <br>                                 
+                                    Đạt giải trong Kì thi Nét Vẽ Xanh cấp quận năm 2017, 2018, 2019 <br>
+                                    Phụ trách các phong trào về mỹ thuật của lớp từ năm học 2018-2022 </p>
+                            </div>
+                        </div>
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_dct2.png" alt="Nguyễn Thảo Trúc" style = "margin: 10px; margin-left: 0; width: 100%; height: 70%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Thảo Trúc</b>
+                                <p>Huy chương vàng môn Toán kì thi Olympic 30/4 năm học 2018-2019 <br>
+                                Huy chương bạc môn Toán kì thi Olympic 30/4 năm học 2020-2021 <br>
+                                Công nhận học sinh giỏi cấp quận môn Toán năm học 2020-2021 <br>
+                                Top 12 học sinh đạt điểm tuyển sinh (văn, toán, anh) cao nhất thành phố... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "decotrans_space" id = "decotrans_space">
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Lê Thị Xuân Uyên" style = "margin: 10px; width: 90%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Lê Thị Xuân Uyên</b>
+                                <p> Đạt thành tích học sinh giỏi 9 năm liền, top 3 của lớp
+                                Từng tham gia đội tuyển Anh
+                                Đã từng đảm nhiệm clean, edit, type các trang truyện manga.
+                                Có kinh nghiệm sử dụng Photoshop 2 năm </p>
+                            </div>
+                        </div>
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_dct3.png" alt="Trần Hoa Thiên" style = "margin: 10px; width: 90%; height: 85%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Trần Nguyễn Hoa Thiên</b> 
+                                <p> Thủ khoa chuyên Văn Kỳ thi đầu vào Phổ Thông Năng Khiếu  (37,5đ) <br>
+                                    Đạt 42.25đ chuyên Văn Kỳ thi Tuyển sinh lớp 10 Sở GD-ĐT TP.HCM <br>
+                                    Làm trong dự án Chicken Minds, môn Văn <br>
+                                    Kinh nghiệm viết lách, viết caption Facebook </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "decotrans_space" id = "decotrans_space">
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_dct4.png" alt="Đặng Thảo Nhi" style = "margin: 10px; margin-left: 0; width: 100%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đặng Thảo Nhi</b>
+                                <p>Giải Nhì HSG cấp thành phố môn Ngữ Văn năm 2022 <br>
+                                    Trúng tuyển Chuyên Văn trường  THPT Nguyễn Thượng Hiền <br>
+                                    Đạt 7,25 Văn Chuyên kỳ thi tuyển sinh 10 trường Phổ thông Năng Khiếu </p>
+                            </div>
+                        </div>
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Hoàng Ngọc Bảo Trân" style = "margin-top: 10px; width: 100%; height: 50%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hoàng Ngọc Bảo Trân</b>
+                                <p> Đậu vào lớp CA và 10TN1 của THPT Gia Định <br>
+                                    Đại diện trường cấp 2 đón tiếp dàn học sinh ngoại quốc từ Singapore năm lớp 7 <br>
+                                    Đạt trình độ C1 tiếng Anh (Ielts Mock Test’s Band Score: 7.5) <br>
+                                    Đạt danh hiệu HSG Tiếng Anh cấp quận năm 2021-2022... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "decotrans_space" id = "decotrans_space">
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_dct7.png" alt="Võ Quỳnh Trâm" style = "margin: 10px; margin-left: 0; width: 100%; height: 55%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Võ Quỳnh Trâm</b>
+                                <p>A5 22-25 minh khai
+                                Ôn đội tuyển hsg văn của trường năm lớp 9 <br>
+                                Lớp trưởng 8 năm và làm leader hầu hết cái bài thuyết trình nên có trách nhiệm làm việc <br>
+                                Content writer cho page “Trì Trệ” </p>
+                            </div>
+                        </div>
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head7.png" alt="Hồ Huy Hoàng" style = "margin-top: 10px; width: 90%; height: 55%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hồ Huy Hoàng</b>
+                                <p> Huy Chương Bạc môn Tiếng Anh, cuộc thi Olympic 30/4 TP.HCM năm lớp 8 <br>
+                                    Giải Nhì môn Tiếng Anh, cuộc thi Học Sinh Giỏi cấp Thành Phố TP.HCM năm lớp 9 <br>
+                                    Được chọn vào đội tuyển Olympic 10 Chuyên của trường THPT Chuyên Trần Đại Nghĩa <br>
+                                    Tranh biện trong hội nghị mô hình Liên Hợp Quốc của Trần Đại Nghĩa (TOMUN) <br>
+                                    Hai năm tự học, gắn bó với tiếng Pháp </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "decotrans_space" id = "decotrans_space">
+                        <div class = "decotrans_person" id = "decotrans_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_web7.png" alt="Đặng Phước Nguyên Khôi" style = "margin: 10px; margin-left: 0; width: 100%; height: 70%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đặng Phước Nguyên Khôi</b>
+                                <p>Top 4 Kì thi đầu vào chuyên Anh Trường THPT Chuyên Thăng Long. <br>
+                                Top 2 Điểm Anh chuyên kì thi đầu vào chuyên Anh Trường THPT Chuyên Thăng Long <br>
+                                Giải nhì cuộc thi English in Your Life Lâm Đồng. <br>
+                                Thành viên CLB Tài năng Lập trình FPT Software - FCT Club. <br>
+                                Outstanding learner of the year 2021 của FCT Club. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "hrerpr" id = "hrerpr">
+                <b style = "font-size: 20px; margin: 5px;">Ban HR, ER, PR </b>
+                <div class = "information" id = "information">
+                    <div class = "hrerpr_space" id = "hrerpr_space">
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Hồng Anh" style = "margin: 10px; margin-left: 0; width: 100%; height: 70%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Hồng Anh</b>
+                                <p>Trúng tuyển Chuyên Anh Trường Phổ thông Năng khiếu và THPT chuyên Trần Đại Nghĩa <br>
+                                Thành viên ban Nhân sự - The Institute of Viécie Gen 1 <br>
+                                Đại sứ truyền thông Path to Psyche - P2P Gen tháng 8/2022 <br>
+                                Thành viên ban Truyền thông - Wing And Wish Gen 2 <br>
+                                Thành viên ban Nhân sự trong CLB Vật lý+ của THPT Chuyên TĐN </p>
+                            </div>
+                        </div>
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head3.png" alt="Nguyễn Hoàng Thái Sơn" style = "margin: 10px; width: 75%; height: 65%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Hoàng Thái Sơn</b>
+                                <p>Ảnh chất lượng nhưng chưa có info :33</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "hrerpr_space" id = "hrerpr_space">
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head7.png" alt="Hồ Huy Hoàng" style = "margin: 10px; width: 90%; height: 55%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Hồ Huy Hoàng</b>
+                                <p> Huy Chương Bạc môn Tiếng Anh, cuộc thi Olympic 30/4 TP.HCM năm lớp 8 <br>
+                                    Giải Nhì môn Tiếng Anh, cuộc thi Học Sinh Giỏi cấp Thành Phố TP.HCM năm lớp 9 <br>
+                                    Được chọn vào đội tuyển Olympic 10 Chuyên của trường THPT Chuyên Trần Đại Nghĩa <br>
+                                    Tranh biện trong hội nghị mô hình Liên Hợp Quốc của Trần Đại Nghĩa (TOMUN) <br>
+                                    Hai năm tự học, gắn bó với tiếng Pháp </p>
+                            </div>
+                        </div>
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_hrerpr4.png" alt="Đỗ Cao Ngọc Minh Trang" style = "margin: 10px; width: 90%; height: 55%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đỗ Cao Ngọc Minh Trang</b> 
+                                <p> Trúng tuyển chuyên Anh TĐN <br>
+                                    Đạt giải nhất trong cuộc thi Pioneers of Tomorrow với chủ đề là giáo dục giới tính <br>
+                                    Có kinh nghiệm tự học thêm tiếng Trung </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "hrerpr_space" id = "hrerpr_space">
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/" alt="Nguyễn Như Mai" style = "margin: 10px; margin-left: 0; width: 100%; height: 80%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Nguyễn Như Mai</b>
+                                <p> Đậu Chuyên Anh TĐN, LHP <br>
+                                Đạt giải Nhì HSG Thành phố môn Anh lớp 9 <br>
+                                Thành viên ban Nhân sự - The Institute of Viécie Gen 1</p>
+                            </div>
+                        </div>
+                        <div class = "hrerpr_person" id = "hrerpr_person">
+                            <div class = "image" id = "image">
+                                <img src="assets/imgs/members_head8.png" alt="Đặng Mai Khánh Minh" style = "margin-top: 10px; width: 90%; height: 90%"> 
+                            </div> 
+                            <div class = "info" id = "info">
+                                <br><b>Đặng Mai Khánh Minh</b>
+                                <p> Trúng tuyển lớp 10XH trường PTNK-ĐHQG <br>
+                                    TOEFL junior đạt 845/900 <br>                 
+                                    Phó ban chương trình CLB Hàn Quốc trường THPT chuyên Trần Đại Nghĩa </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         
     </section>
     <!-- End of portfolio section -->
     <!-- Contact Section -->
