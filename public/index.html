@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="BeOne">
     <meta name="author" content="BeOne">
@@ -9,8 +10,94 @@
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + LeadMark main styles -->
-	<link rel="stylesheet" href="assets/css/leadmark.css">
+    <link rel="stylesheet" href="assets/css/leadmark.css">
 </head>
+
+<style>
+    #Introduction,
+    #Information,
+    #service {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #Introduction .container,
+    #Information .container,
+    #service .container {
+        padding: 70px;
+    }
+    /* Introduction */
+    
+    #Introduction {
+        background-image: url("assets/imgs/BeOne.png");
+        background-color: #ffffff;
+    }
+    
+    #Introduction h6 {
+        font-size: 50px;
+    }
+    
+    #Introduction p {
+        display: block;
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        border: none;
+    }
+    
+    #Introduction a {
+        display: block;
+        border-radius: 30px;
+        width: fit-content;
+        background-color: #5371ff;
+        color: #000000;
+        padding: 15px 25px 15px 25px;
+    }
+    /* Information */
+    
+    #Information h6 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    #Information p {
+        display: block;
+    }
+    
+    #Information hr {
+        width: 500px;
+        height: 1px;
+        background-color: #000000;
+        margin: auto;
+    }
+    
+    #Information #info-p {
+        display: block;
+        margin-top: 30px;
+    }
+    
+    #Information .card {
+        display: inline-block;
+        width: 400px;
+        margin-left: 50px;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    #Information .card p {
+        display: block;
+        font-size: 20px;
+        margin: 30px;
+    }
+    /* Service */
+    
+    #service h6 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+</style>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- page Navigation -->
@@ -23,7 +110,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">                     
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -46,30 +133,86 @@
     <header class="header">
         <div class="overlay">
             <h1 class="subtitle">Welcome to</h1>
-            <h1 class="title">BeOne</h1>  
-        </div>  
+            <h1 class="title">BeOne</h1>
+        </div>
         <div class="shape">
             <svg viewBox="0 0 1500 200">
                 <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
             </svg>
-        </div>  
-        <div class="mouse-icon"><div class="wheel"></div></div>
+        </div>
+        <div class="mouse-icon">
+            <div class="wheel"></div>
+        </div>
     </header>
     <!-- End Of Page Header -->
 
-    <!-- Service Section -->
-    <section  id="service" class="section pt-0">
+    <!-- Introduction Section -->
+    <section id="Introduction" class="section pt-0">
         <div class="container">
-            <h6 class="section-title text-center">Our Mission</h6>
-            <h6 class="section-subtitle text-center mb-5 pb-3">BeOne cống hiến và giữ gìn nền hòa bình thế giới.</h6>
+            <h6 class="section-title mb-0">Introduction</h6>
+            <p id="intro-detail"><b>BeOne Organisation</b> là tổ chức phi lợi nhuận gồm 3 dự án lớn là: BeOne Kids For Peace, BeOne Skilladora và BeOne Bookaholic được thành lập bởi các bạn học sinh, sinh viên trên toàn quốc có chung niềm đam mê, khao khát phát triển bản
+                thân. Các thành viên BeOne Organisation của chúng mình cùng nhau cống hiến và giữ gìn nền hòa bình thế giới, cùng tìm hiểu về ngành Công nghệ thông tin - chủ nhân của thời đại 4.0 và cùng nhau tìm hiểu về những cuốn sách hay. Bằng việc
+                hợp tác với tổ chức Quốc tế Kids For Peace, Girls who code, AI for Good, Fourdozen…BeOne hứa hẹn sẽ kết nối mọi người và tạo cơ hội cho tất cả những bạn trẻ đam mê, có mong muốn kết nối với thế giới bên ngoài, học hỏi, giao lưu với các
+                học sinh trên khắp thế giới. Với tầm nhìn là một thế giới văn mình, phát triển, nơi tất cả mọi người tôn trọng và quan tâm đến nhau cũng như hành tinh của chúng ta. BeOne đóng vai trò là hình mẫu và nguồn cảm hứng để tạo ra thực tế này
+                với việc trẻ em dẫn đầu, không chỉ cho ngày hôm nay mà còn cho các thế hệ sau.
+            </p>
+            <a href="#Information">For more information</a>
+        </div>
+    </section>
+    <!-- End OF Introduction Section -->
+
+    <!-- Information Section -->
+    <section id="Information" class="section pt-0">
+        <div class="container">
+            <h6 class="section-title text-center">Infromation</h6>
+            <hr>
+            <div id="info-p">
+                <p>Nhà - tù - bốn cánh xà lim - cuộn tròn trong chăn ấm - linh hồn giá lạnh - thân xác trống không.</p>
+                <p>Đèn đường xanh, rồ ga chạy, dòng kí sinh và ngọn lửa cháy, đơn thương độc mã, ta là kẻ chôn chân giữa bộn bề vĩnh hằng. Có bao giờ ngắm nhìn triễn lãm tranh, ta nhớ mình đã từng say sưa như một Raephel? Lắng nghe thanh âm của đời thác,
+                    ta nhớ mình đã từng thanh thản biết bao nhiêu hay lướt ngang qua chốn thư viện năm nào, ta nhớ mình đã từng triền miên trong nghệ thuật đến hoang dại?</p>
+                <p>Người trẻ mơ đến tương lai, người già mong về quá khứ.</p>
+                <p>Trưởng thành - chẳng có gì vui?</p>
+                <p>Bản chất của thanh xuân là thế giới với cả bốn mùa ngổn ngang, xuân sinh, hạ trưởng, thu liễm, đông tàn, nắng mưa thất thường nhưng ngập tràn màu sắc. Chấp niệm ấy dẫn lỗi BeOne Organisation ra đời với ba dự án chính Kids for Peace, Skilladora
+                    và Bookaholic sẽ giúp bạn khai phá hạt địa chất trong tâm, phát hiện ra đam mê, sở trường ẩn giấu để từ đó định hướng, khải mặc mục đích sống và kiến tạo nên những kinh nghiệm cho hành trình dấn thân mai hậu.</p>
+                <p>Đến với BeOne, bạn sẽ được cung cấp và trữ lượng một kho tàng kiến thức khổng lồ, đồng thời bạn cũng sẽ có cơ hội để kết thân và giao lưu với những "đồng môn" có chung sở thích. Để BeOne bật mí cho bạn nghe, dự án đang nhận được sự hậu
+                    thuẫn rất lớn đến từ các tổ chức quốc tế liên quan đến những lĩnh vực như Kids for Peace, Skilladora và Bookaholic. Thế nên bạn hoàn toàn yên tâm về nguồn tin và dữ liệu mà sắp tới đây tụi mình cung cấp nhé! Với mong muốn có thể phát
+                    huy tiềm năng của các bạn học sinh/ sinh viên Việt Nam, BeOne sẽ thường niên tạo ra những sân chơi bổ ích như minigame, những cuộc thi về CS, các buổi workshop với sự tham gia của những nhân vật có kiến thức và tầm ảnh hướng về ba
+                    vấn đề mà tụi mình hướng tới.</p>
+                <p>Thanh xuân của mỗi chúng ta cũng như khoảnh khắc nở rộ của pháo hoa bắn lên bầu trời. Hãy để BeOne trở thành thuốc súng, dây cháy, và ống phóng cho âm u của mỗi người sẽ lại linh đình rộn rã những khúc ca. Còn chần chờ gì nữa mà không
+                    mau mau gia nhập vào đại gia đình BeOne, hỡi pháo hoa của một tuổi trẻ bơ vơ, vô định lạc lối?</p>
+            </div>
+            <a href="#service">
+                <div class="card">
+                    <img src="assets/imgs/branding-2.jpg">
+                    <p>Goals</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="assets/imgs/branding-2.jpg">
+                    <p>Partner/Sponser</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- End OF Information Section -->
+
+    <!-- Service Section -->
+    <section id="service" class="section pt-0">
+        <div class="container">
+            <h6 class="section-title text-center">Goals</h6>
+            <p>Được thành lập bởi các thành viên mang cùng chí hướng về việc kết nối toàn cầu, mục đích lớn nhất mà mà BeOne Organisation hướng đến là việc giúp đỡ cho các bạn trẻ kết nối đến thế giới bên ngoài. Từ đó mà những mục tiêu kéo theo như mở mang
+                kiến thức và duy trì, phát triển các kỹ năng mềm của học sinh, sinh viên được tạo ra và nhấn mạnh trong suy nghĩ của các thành viên. Hơn thế nữa, BeOne Org tạo ra những dự án nhằm tạo cơ hội cho học sinh, sinh viên được tìm hiểu và hoàn
+                thiện bản thân trong và ngoài lĩnh vực của mình. Các lĩnh vực ở đây có thể kể đến là về cuộc sống, xã hội; công nghệ thông tin và đọc sách. Cụ thể các dự án như sau:</p>
 
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">01</small>
-                            <h5 class="card-title mt-3"> Beatae quo <h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab fuga quae, minima reprehenderit sequi fugit.</p>
+                            <h5 class="card-title mt-3">BeOne Kids For Peace
+                                <h5>
+                                    <p class="mb-0">với mục tiêu là hướng các bạn trẻ đến việc cống hiến cho nước nhà và thế giới hay đóng góp cho nền hòa bình, nền độc lập và môi trường xung quanh</p>
                         </div>
                     </div>
                 </div>
@@ -77,8 +220,9 @@
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">02</small>
-                            <h5 class="card-title mt-3">Delectus Suscipit<h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab fuga quae, minima reprehenderit sequi fugit.</p>
+                            <h5 class="card-title mt-3">BeOne Skilladora
+                                <h5>
+                                    <p class="mb-0">với mục tiêu nâng cao kỹ năng cho các bạn học sinh, sinh viên về ngành nghề Computer Science</p>
                         </div>
                     </div>
                 </div>
@@ -86,13 +230,13 @@
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">03</small>
-                            <h5 class="card-title mt-3">Itaque harum<h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab fuga quae, minima reprehenderit sequi fugit.</p>
+                            <h5 class="card-title mt-3">BeOne Bookaholic
+                                <h5>
+                                    <p class="mb-0">lại mang tính thiết thực nhất về văn hóa đọc của giới trẻ nên điều mà dự án này mong muốn nhất là hình thành thói quen đọc sách cho giới trẻ sống trong thời đại 4.0</p>
                         </div>
                     </div>
-                </div>              
+                </div>
             </div>
-        </div>
     </section>
     <!-- End OF Service Section -->
 
@@ -103,7 +247,7 @@
                 <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
                     <h6 class="section-title mb-0">About Us</h6>
                     <h6 class="section-subtitle mb-4">Architecto provident deserunt</h6>
-                    <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate molestiae temporibus et tenetur unde quasi, cum nemo quo, molestias architecto alias voluptatibus corrupti corporis earum. Necessitatibus maxime modi ipsam, quod!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate molestiae temporibus et tenetur unde quasi, cum nemo quo, molestias architecto alias voluptatibus corrupti corporis earum. Necessitatibus maxime modi ipsam, quod!</p>
                     <img src="assets/imgs/about.jpg" alt="" class="w-100 mt-3 shadow-sm">
                 </div>
                 <div class="col-md-6 pl-md-5">
@@ -122,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-            </div>              
+            </div>
         </div>
     </section>
     <!-- End OF About Section -->
@@ -138,7 +282,7 @@
                 <div class="col-md-4">
                     <div class="card border-0 mb-4">
                         <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                        <div class="card-body">
                             <h6 class="card-title">KFP</h6>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
                             <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
@@ -148,17 +292,17 @@
                 <div class="col-md-4">
                     <div class="card border-0 mb-4">
                         <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                        <div class="card-body">
                             <h6 class="card-title"> Skilladora</h5>
-                            <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                                <p>Fuga quae ratione inventore Perferendis porro.</p>
+                                <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4">
                         <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                        <div class="card-body">
                             <h6 class="card-title">Bookaholic</h6>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
                             <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
@@ -204,25 +348,28 @@
                             </div>
                             <div class="form-group col-12 mb-0">
                                 <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
-                            </div>                          
-                        </div>                          
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
             <!-- Page Footer -->
             <footer class="mt-5 py-4 border-top border-secondary">
-                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, LeadMark Created By <a href="https://www.devcrud.com" target="_blank">DevCrud.</a>  All rights reserved </p>     
+                <p class="mb-0 small">&copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, LeadMark Created By <a href="https://www.devcrud.com" target="_blank">DevCrud.</a> All rights reserved </p>
             </footer>
-            <!-- End of Page Footer -->  
+            <!-- End of Page Footer -->
         </div>
     </section>
-	
-	<!-- core  -->
+
+    <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Isotope -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
@@ -230,5 +377,8 @@
     <!-- LeadMark js -->
     <script src="assets/js/leadmark.js"></script>
 
+    <script>
+    </script>
 </body>
+
 </html>
